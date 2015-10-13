@@ -15,7 +15,7 @@ default:
 clean:
 	$(MAKE) -C $(KDIR) M=$$PWD clean
 
-libxt_SB6193.so: libxt_SB6183.c
+libxt_SB6183.so: libxt_SB6183.c
 	gcc -fPIC -shared -o libxt_SB6183.so -I $(IPTABLES_SRC)/include/ libxt_SB6183.c 
 
 endif
