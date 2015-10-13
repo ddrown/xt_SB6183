@@ -5,6 +5,7 @@ obj-m  := xt_SB6183.o
 else
 # normal makefile
 KDIR = ../linux
+IPTABLES_SRC = ../iptables
 
 .PHONY: default clean
 
