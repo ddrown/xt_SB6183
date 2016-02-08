@@ -9,3 +9,7 @@ Testing sending 50 tcp syn packets to 3 different networks:
 	timestamp set in header, using -j TCPOPTSTRIP --strip-options timestamp: 40/150 Lost
 	timestamp set in header, using -j SB6183: 2/150 Lost
 	timestamp not set in header: 2/150 Lost
+
+
+example iptables command:
+ip6tables -t mangle -I FORWARD -p tcp --tcp-option 8 -o enp4s0 -j SB6183
